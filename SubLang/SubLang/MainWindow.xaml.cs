@@ -22,7 +22,14 @@ namespace SubLang
     {
         public MainWindow()
         {
+            Model.DetectLanguage.DetectLanguageModel.Result res = Model.DetectLanguage.ServiceDetecLanguageModel.DetectSimple("bonjour le monde");
+
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Model.DetectLanguage.DetectLanguageModel.Result res = Model.DetectLanguage.ServiceDetecLanguageModel.DetectSimple("bonjour le monde");
         }
     }
 }

@@ -1,8 +1,31 @@
 ﻿<Window x:Class="SubLang.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="SubLang" Height="420" Width="420"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Margin="0,0,0,24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="64"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="128"/>
+            </Grid.ColumnDefinitions>
+            <Grid Background="#0074d9" Margin="0,0,12,0">
+                <TextBlock Text="/r/" Margin="12,0,12,0" Foreground="White" FontSize="24" TextAlignment="Center" />
+            </Grid>
+            <Border Margin="0,0,12,0" Grid.Column="1" BorderBrush="#0074d9" BorderThickness="0,0,0,2">
+                <TextBox Margin="4,0,4,0" Text="Paris" Foreground="#1A1A1A"  BorderThickness="0" VerticalAlignment="Bottom" FontSize="24" />
+            </Border>
+            <Button Grid.Column="2" Content="Display" Click="Button_Click" IsDefault="True"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <!--<ListBox x:Name="Langs">
+                
+            </ListBox>-->
+        </Grid>
     </Grid>
 </Window>
